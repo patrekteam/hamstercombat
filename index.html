@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кликер хомяка</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        #hamster {
+            width: 200px; /* Размер изображения хомяка */
+            cursor: pointer;
+        }
+        #clickCount {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+        #tiktok {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>кликай меня уебак</h1>
+    <img src="https://prufy.ru/upload/iblock/803/zk82t02wdggoonja0er9i1m77ika4ipj.jpg" alt="Хомяк" id="hamster">
+    <div id="clickCount">Кликов: <span id="count">0</span></div>
+    <div id="tiktok">
+        <p>Мой TikTok: <a href="https://www.kazik47.ru" target="_blank">tiktok.com/@postalor2</a></p>
+    </div>
+
+    <script>
+        let clicks = 0;
+        const hamster = document.getElementById('hamster');
+        const countSpan = document.getElementById('count');
+
+        hamster.addEventListener('click', function() {
+            clicks++;
+            countSpan.textContent = clicks;
+        });
+    </script>
+</body>
+</html>
